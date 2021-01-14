@@ -5,7 +5,6 @@ const fetch = require("node-fetch");
 router.get("/", async(req, res) => {
     let { base, currency } = req.query;
     const url = "https://api.exchangeratesapi.io/latest";
-    // console.log(base, currency);
     try {
         const fetchExchangeRates = await fetch(
             `${url}?base=${base}&currency=${currency}`
