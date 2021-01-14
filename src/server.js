@@ -1,5 +1,8 @@
 const express = require("express");
+const dotenv = require("dotenv");
+
 const exchangeRateRouter = require("./routes/exchangeRate");
+dotenv.config();
 
 const app = express();
 
