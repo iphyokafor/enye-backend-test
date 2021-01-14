@@ -1,4 +1,5 @@
 const express = require("express");
+const welcomeRouter = require("./routes/index");
 const exchangeRateRouter = require("./routes/exchangeRate");
 
 const app = express();
@@ -6,6 +7,7 @@ const app = express();
 app.use(express.urlencoded());
 app.use(express.json());
 
+app.use("/api", welcomeRouter);
 app.use("/api/rates", exchangeRateRouter);
 
 const port = process.env.PORT || 7000;
