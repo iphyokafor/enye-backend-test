@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.use("/api/rates", exchangeRateRouter);
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 7000;
 app.listen(port, () => {
     console.log(`Server is up and running on port ${port}`);
 });
